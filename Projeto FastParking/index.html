@@ -1,0 +1,186 @@
+<html>
+   <head> 
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="main.css">
+   </head>
+   <body>
+      <!--Título e Logo-->
+      <div class="titulo_logo">
+         <div class="titulo">
+            <h1 class="formatacao_titulo">Sistema Fast Parking</h1>
+         </div>
+         <div class="logo">
+            <img src="./img/logo.png" class="logo" alt="Logo Fast Parking" title="Logo Fast Parking"/>
+         </div>
+      </div>
+
+      <!--Seção de Cadastro-->
+      <div class="cadastro-form">
+         <form class="formulario" id="formulario_principal">
+            <div class="form_item">
+               <label class="formatacao_texto">Nome: </label>
+               <input class="formatacao_texto" type="text" id="nome" placeholder="Nome Completo"/>   
+            </div>
+            <div class="form_item">
+               <label class="formatacao_texto">Placa: </label>
+               <input class="formatacao_texto" type="text" id="placa" placeholder="Ex.: XXX-0000"/>   
+            </div>
+         </form>
+         <div class="acao">
+            <button class="botao formatacao_texto" id="adicionar">Adicionar</button>
+            <button class="botao formatacao_texto" id="btnPrecos">Preços</button>
+            <button class="botao formatacao_texto" id="relatorio">Registro Diário</button>
+         </div>
+      </div>
+
+      <!--Tabela de Clientes-->
+      <div class="tabela_bancodados">
+         <table class="tabela">
+            <thead class="campos">
+               <tr>
+                  <th class="formatacao_texto">Nome</th>
+                  <th class="formatacao_texto">Placa</th>
+                  <th class="formatacao_texto">Data de Entrada</th>
+                  <th class="formatacao_texto">Horário de Entrada</th>
+                  <th class="formatacao_texto">Ações</th>
+               </tr>
+            </thead>
+            <tbody class="registros" id="registros">
+               
+            </tbody>
+         </table>
+      </div>
+
+      <!--Modais-->
+      <!--Modal Preços-->
+      <div class="conteiner-modal-precos">
+         <div class="modal_precos">
+            <div class="titulo_precos">
+               <h2 class="formatacao_subtitulo" id="subtitulo_precos">Preços</h2>
+            </div>
+            <form class="formulario" id="formulario_precos">
+               <div class="form_item">
+                  <label class="formatacao_texto">Primeira Hora: &nbsp;R$</label>
+                  <input class="formatacao_texto" type="text" id="valor_primeira_hora" placeholder="Ex.: 6,00"/>  
+               </div>
+               <div class="form_item">
+                  <label class="formatacao_texto">Demais horas: &nbsp;R$</label>
+                  <input class="formatacao_texto" type="text" id="valor_demais_horas" placeholder="Ex.: 4,00"/>
+               </div>
+               <div class="form_item">
+                  <label class="formatacao_texto">Tolerância: </label>
+                  <input class="formatacao_texto" type="text" id="tolerancia" placeholder="Ex.: 5 (minutos)"/>
+               </div>
+            </form>
+            <div class="acao">
+               <button class="botao formatacao_texto" id="salvar_valores">Salvar</button>
+               <button class="botao botao_fechar formatacao_texto" id="fechar_valores">Cancelar</button>
+            </div>
+         </div>   
+      </div>
+
+      <!--Modal Relatório-->
+      <div class="conteiner-modal-relatorio">
+         <div class="modal_relatorio">
+            <div class="titulo_relatorio">
+               <h2 class="formatacao_subtitulo" id="subtitulo_relatorio">Relatório Diário</h2>
+            </div>
+            <!--Tabela de Clientes-->
+            <div class="tabela_relatorio">
+               <table class="tabela tabela_relatorio">
+                  <thead class="campos">
+                     <tr>
+                        <th class="formatacao_texto">Nome</th>
+                        <th class="formatacao_texto">Placa</th>
+                        <th class="formatacao_texto">Data / Hora Entrada</th>
+                        <th class="formatacao_texto">Data / Hora Saída</th>
+                        <th class="formatacao_texto">Valor Pago</th>
+                     </tr>
+                  </thead>
+                  <tbody class="registros" id="registros_relatorio">
+                  
+                  </tbody>
+               </table>
+
+               <div class="acao">
+                  <button class="botao botao_fechar formatacao_texto" id="fechar_relatorio">Fechar</button>
+               </div>
+
+            </div>
+
+         </div>   
+      </div>
+
+      <!--Modal Comprovante-->
+      <div class="conteiner-modal-comprovante">
+         <div class="modal_comprovante">
+
+            <div class="titulo_logo">
+               <div>
+                  <h2 class="formatacao_subtitulo centralizar">Sistema Fast Parking</h2>
+               </div>
+               <div class="logo">
+                  <img src="./img/logo.png" class="logo" alt="Logo Fast Parking" title="Logo Fast Parking"/>
+               </div>
+            </div>
+
+            <div id="subtitulo_comprovante">
+               <h2 class="formatacao_subtitulo" >Comprovante</h2>
+            </div>
+            <hr>
+            <form class="formulario" id="formulario_comprovante">
+               <div class="formulario_comprovante_itens">
+               <div class="form_item">
+                  <label class="formatacao_texto">Nome: </label>
+                  <label class="formatacao_texto" id="nome_comprovante"></label>   
+               </div>
+               <div class="form_item">
+                  <label class="formatacao_texto">Placa: </label>
+                  <label class="formatacao_texto" id="placa_comprovante"></label>   
+               </div>
+               <div class="form_item">
+                  <label class="formatacao_texto">Data de Entrada: </label>
+                  <label class="formatacao_texto" id="data_entrada_comprovante"></label>   
+               </div>
+               <div class="form_item">
+                  <label class="formatacao_texto">Hora de Entrada: </label>
+                  <label class="formatacao_texto" id="hora_entrada_comprovante"></label>   
+               </div>
+               </div>
+            </form>
+            <div class="acao">
+               <button class="botao formatacao_texto" id="imprimir_comprovante">Imprimir</button>
+               <button class="botao botao_fechar formatacao_texto" id="fechar_comprovante">Fechar</button>
+            </div>
+         </div>   
+      </div>
+
+      <!--Modal Edição-->
+      <div class="conteiner-modal-edicao">
+         <div class="modal_edicao">
+            <div class="titulo_edicao">
+               <h2 class="formatacao_subtitulo" id="subtitulo_edicao">Edição</h2>
+            </div>
+            <form class="formulario" id="formulario_principal">
+               <div class="form_item">
+                  <label class="formatacao_texto">COD: </label>
+                  <label class="formatacao_texto" id="codigo_edicao"></label>  
+               </div>
+               <div class="form_item">
+                  <label class="formatacao_texto">Nome: </label>
+                  <input class="formatacao_texto" type="text" id="nome_edicao" placeholder="Nome Completo"/>   
+               </div>
+               <div class="form_item">
+                  <label class="formatacao_texto">Placa: </label>
+                  <input class="formatacao_texto" type="text" id="placa_edicao" placeholder="Ex.: XXX-0000"/>   
+               </div>
+            </form>
+            <div class="acao">
+               <button class="botao formatacao_texto" id="atualizar_edicao">Atualizar</button>
+               <button class="botao botao_fechar formatacao_texto" id="cancelar_edicao">Cancelar</button>   
+            </div>
+      </div>
+      
+      <script src="./cadastro.js"></script>  
+   </body>
+</html>

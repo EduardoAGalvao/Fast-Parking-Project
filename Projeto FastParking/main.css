@@ -1,0 +1,321 @@
+/*Classes de Padronização*/
+
+body{
+   background-image: url(./img/background.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+.formatacao_titulo{
+   color: #1C618C;
+   font-size: 60px;
+   font-weight: bold;
+   font-family: 'Roboto';
+}
+
+.formatacao_subtitulo{
+   color: #1C618C;
+   font-size: 34px;
+   font-weight: 400;
+   font-family: 'Roboto';   
+}
+
+.formatacao_texto{
+   color: #666666;
+   font-size: 22px;
+   font-weight: bold; 
+   font-family: 'Roboto';  
+}
+
+.centralizar_texto{
+   text-align: center;
+}
+
+/*Título e Logo*/
+.logo{
+   height: 180px;
+   width: auto;
+}
+
+.titulo{
+   text-align: center;
+}
+
+.titulo_logo{
+   display: flex;
+   justify-content: space-around;
+}
+
+/*Seção de Cadastro*/
+.formulario{
+   display: flex;
+   flex-direction: column;
+}
+
+.cadastro-form  {
+   background-color: rgba(255,255,255,0.7);
+   width: 30vw;
+   margin: 10vh auto;
+   border-radius: 20px;
+   box-shadow: 0px 0px 20px black;  
+   overflow: hidden;
+}
+
+.form_item{
+   display: flex;
+   justify-content: center;
+   padding: 20px;
+   align-items: center;
+}
+
+.form_item > input{
+   margin-left: 15px;
+   border-radius: 5px;
+   border: 1px solid #dee7eb;
+   width: 60%;
+   height: 40px;
+}
+
+.form_item > input:hover{
+   box-shadow: 0px 0px 3px #97a9b2;s
+}
+
+.acao{
+   display: flex;
+   padding: 2vw;
+   justify-content: space-around;   
+}
+
+.botao{
+   background-color: #ffffff;
+   border: 1px solid #1C618C;
+   border-radius: 5px;
+   color: #1C618C;
+   height: 70px;
+   width: 120px;
+   box-shadow: 0px 0px 3px black;
+   cursor: pointer;
+   user-select: none;
+}
+
+.botao:hover{
+   background-color: #1C618C;
+   color: #ffffff;
+   transition: 0.5s;
+}
+
+/*Tabela de Clientes*/
+.tabela_bancodados{
+   padding: 2vw;
+   display: flex;
+   justify-content: center;
+}
+
+.tabela{
+   width: 80%;
+   border-radius: 5px;
+   box-shadow: 0px 0px 20px black;
+   background-color: rgba(255,255,255,0.7);
+}
+
+th{
+   color: #103554 !important;
+   padding: 10px;
+   font-size: 26px !important;
+}
+
+td{
+   border-radius: 5px;
+   border: 4px solid #575234;
+   color: black !important;
+   text-align: center;
+   width: auto;
+}
+
+.registros > tr:hover {
+   background-color: rgba(214, 195, 64, 0.5);
+}
+
+.botao_tabela {
+   max-height: 40px;
+   min-width: 150px;
+   border: 1px solid #C74D12;
+   border-radius: 5px;
+   color: #C74D12;
+}
+
+.botao_tabela:hover{
+   background-color: #C74D12;
+   color: #FFFFFF; 
+   transition: 0.5s; 
+   cursor: pointer; 
+}
+
+.acoes{
+   padding: 10px;
+   width: 28vw;
+   text-align: center;
+}
+
+/*Modais*/
+
+.conteiner-modal-precos,
+.conteiner-modal-relatorio,
+.conteiner-modal-comprovante,
+.conteiner-modal-edicao{
+   width: 100vw;
+   height: 100vh;
+   background-color: #00000077;
+   top:0px;
+   left: 0px;
+   position: fixed;
+   z-index: -5;
+   opacity:0;
+   transition: all 0.5s;
+}
+
+.conteiner-modal-precos.exibirModal,
+.conteiner-modal-relatorio.exibirModal,
+.conteiner-modal-comprovante.exibirModal,
+.conteiner-modal-edicao.exibirModal{
+   opacity:1;
+   z-index: 2000;
+   transition: all 0.5s;
+}
+
+.botao_fechar{
+   background-color: white;
+   border: 1px solid #A1332F;
+   color: #A1332F;
+}
+
+.botao_fechar:hover{
+   background-color: #A1332F;
+   color: white;
+   transition: 0.5s;
+}
+
+/*Modal Preços*/
+
+.modal_precos{
+   background-color: white;
+   width: 45vw;
+   margin: 10vh auto;
+   border-radius: 5px;
+   box-shadow: 0px 0px 20px black;  
+   overflow: hidden;
+}
+
+#salvar_valores{
+   background-color: white;
+   border: 1px solid #008400;
+   color: #008400;
+}
+
+#salvar_valores:hover{
+   background-color: #008400;
+   color: white;
+   transition: 0.5s;
+}
+
+.titulo_precos{
+   display: flex;
+   background-color: #008400;
+}
+
+#subtitulo_precos{
+   padding-left: 30px;
+   color: white;
+}
+
+/*Modal Relatório*/
+
+.modal_relatorio{
+   background-color: white;
+   width: 70vw;
+   margin: 10vh auto;
+   border-radius: 5px;
+   box-shadow: 0px 0px 20px black;  
+   overflow: hidden;
+} 
+
+.titulo_relatorio{
+   display: flex;
+   background-color: #103554;
+}
+
+#subtitulo_relatorio{
+   padding-left: 30px;
+   color: white;
+}
+
+/*Tabela - Relatório*/
+.tabela_relatorio{
+   width: 100%;
+   box-shadow: 0px 0px 0px black;
+   padding-top: 10px;
+}
+
+/*Modal Comprovante*/
+
+.modal_comprovante{
+   background-color: white;
+   width: 35vw;
+   margin: 10vh auto;
+   border-radius: 5px;
+   box-shadow: 0px 0px 20px black;  
+   overflow: hidden; 
+}
+
+.modal_comprovante .logo{
+   height: 100px;
+   width: auto;
+}
+
+#subtitulo_comprovante{
+   padding-left: 10px;
+}
+
+.titulo_logo .formatacao_subtitulo{
+   color: #666666;
+   font-weight: 600;
+}
+
+#formulario_comprovante .form_item{
+   width: 300px;
+   display: inline;
+}
+
+.formulario_comprovante_itens{
+   display: flex;
+   flex-direction: column;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+/*Modal Edição*/
+
+.modal_edicao{
+   background-color: white;
+   width: 40vw;
+   margin: 10vh auto;
+   border-radius: 5px;
+   box-shadow: 0px 0px 20px black;  
+   overflow: hidden; 
+}
+
+.titulo_edicao{
+   display: flex;
+   background-color: #C74D12;
+}
+
+#subtitulo_edicao{
+   padding-left: 30px;
+   color: white;
+}
+
+/*
+.formulario input.erroCampo{
+    border: 4px solid red !important;
+}*/
