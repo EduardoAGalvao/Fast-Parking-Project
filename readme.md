@@ -9,21 +9,21 @@ In this way, the project should focus on creating JavaScript CRUD in its direct 
 
 - Store vehicle information, including current date and time;
 
-<img src="./gif/adicao.gif"/>
+<img src="./gif/adicao.gif" alt="Create Gif" title="Create Gif"/>
 
 - Generate proof of vehicle and customer data at the time of entry;
 
-<img src="./gif/comprovante.gif"/>
+<img src="./gif/comprovante.gif" alt="Proof Gif" title="Proof Gif"/>
 
 - Enable the editing of the customer's name or vehicle license plate;
 
-<img src="./gif/edicao.gif"/>
+<img src="./gif/edicao.gif" alt="Update Gif" title="Update Gif"/>
 
 - Store prices per hour and other hours;
 
 - Calculate the payment amount at the withdrawal of the vehicle;
 
-<img src="./gif/exclusao.gif"/>
+<img src="./gif/exclusao.gif" alt="Delete Gif" title="Delete Gif"/>
 
 - Display daily report containing the list of the vehicles that made payment and the daily yield;
 
