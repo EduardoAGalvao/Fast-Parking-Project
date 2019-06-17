@@ -9,13 +9,21 @@ In this way, the project should focus on creating JavaScript CRUD in its direct 
 
 - Store vehicle information, including current date and time;
 
+<img src="./gif/adicao.gif"/>
+
 - Generate proof of vehicle and customer data at the time of entry;
 
+<img src="./gif/comprovante.gif"/>
+
 - Enable the editing of the customer's name or vehicle license plate;
+
+<img src="./gif/edicao.gif"/>
 
 - Store prices per hour and other hours;
 
 - Calculate the payment amount at the withdrawal of the vehicle;
+
+<img src="./gif/exclusao.gif"/>
 
 - Display daily report containing the list of the vehicles that made payment and the daily yield;
 
@@ -35,5 +43,9 @@ The language was used based on functional programming methodology, using arrow f
 - Web Storage
 
 One of the main requirements was that there was no reliance on communication with the internet and with servers, so Web Storage was defined as the most viable option. Two databases are created in it to store customer information, vehicles and parking prices.
+
+Version: 1.0
+
+Creation: 16/05/2019
 
 *Everything made with a lot of curiosity and programming passion*
